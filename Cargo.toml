@@ -1,0 +1,23 @@
+[package]
+name = "sfo-net-utils"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/wugren/sfo-net-utils.git"
+description = "A collection of network utilities"
+license-file = "LICENSE"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+c_linked_list = "1.1.1"
+libc = "0.2.153"
+log = "0.4.21"
+
+[target.'cfg(windows)'.dependencies]
+ipconfig = { version = "0.3.2" }
+winapi = { version = '0.3.6', features = [
+    'psapi',
+    'shellapi',
+    'mswsock',
+    'ws2ipdef',
+] }
