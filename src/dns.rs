@@ -2,7 +2,7 @@ use std::io;
 use std::net::IpAddr;
 
 #[cfg(unix)]
-fn system_nameservers() -> io::Result<Vec<IpAddr>> {
+pub fn system_nameservers() -> io::Result<Vec<IpAddr>> {
     use std::fs::File;
     use std::io::{BufRead, BufReader};
 
@@ -29,7 +29,7 @@ fn system_nameservers() -> io::Result<Vec<IpAddr>> {
 
 #[cfg(windows)]
 #[allow(unused)]
-fn system_nameservers() -> io::Result<Vec<IpAddr>> {
+pub fn system_nameservers() -> io::Result<Vec<IpAddr>> {
     use std::net::{IpAddr, UdpSocket};
 
     #[derive(Debug, PartialEq)]

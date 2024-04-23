@@ -1,6 +1,6 @@
 [package]
 name = "sfo-net-utils"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 repository = "https://github.com/wugren/sfo-net-utils.git"
 description = "A collection of network utilities"
